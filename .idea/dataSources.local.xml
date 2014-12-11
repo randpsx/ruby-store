@@ -4,5 +4,7 @@
     <data-source name="SQLite -" uuid="59eecac1-25cb-43d6-b8c6-63217d93d2f8">
       <secret-storage>master_key</secret-storage>
     </data-source>
+    <data-source name="Rails depot: development" uuid="c224360c-59ae-49dc-847b-bf05f36acd4b" />
+    <data-source name="Rails depot: test" uuid="17ca319b-4d01-4098-991c-135054b6a89c" />
   </component>
 </project>

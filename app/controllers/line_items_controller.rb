@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+  skip_before_action :authorize, only: :create
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy, :decrement]
@@ -66,10 +67,10 @@ class LineItemsController < ApplicationController
     end
   end
 
-  # POST /line_items/1
-  # POST /line_items/1.json
+  # PUT /line_items/1
+  # PUT /line_items/1.json
   def decrement
-    @cart = @line_item
+    @cart = current_item
 
     @line_item = @cart.decrement_line_item_quantity(params[:id]) # passing in line_item.id
 
